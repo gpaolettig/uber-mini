@@ -1,4 +1,4 @@
-package domain
+package ride
 
 import "time"
 
@@ -9,4 +9,6 @@ type Ride struct {
 	FareCents   int64
 	CreatedAt   time.Time
 	UpdatedAt   time.Time
+	UserID      uint
+	DriverID    uint
 }
