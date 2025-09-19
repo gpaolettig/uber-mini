@@ -9,9 +9,5 @@ func NewDriverService(driverRepository DriverRepository) *DriverService {
 }
 
 func (s *DriverService) Get(id int) (Driver, error) {
-	driver, err := s.driverRepository.FindById(id)
-	if err != nil {
-		return Driver{}, err //I want to handle error here with a custom error
-	}
-	return driver, nil
+	return s.driverRepository.FindById(id)
 }
